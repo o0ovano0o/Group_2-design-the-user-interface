@@ -10,15 +10,15 @@ Thành viên:
 * Nguyễn Trường Giang (trưởng nhóm)
 * Phùng Xuân Vượng 
 
-<h3>Tổng quan</h3>
+<h1>Tổng quan</h1>
 
 Trong báo cáo này, chúng tôi giới thiệu về quá trình thiết kế một ứng dụng di động hỗ trợ quản lý tài chính. Cách mà chúng tôi lựa chọn thiết kế, triển khai thiết kế và đánh giá khả năng sử dụng của ứng dụng.
 
-<h3>Giới thiệu</h3>
+<h1>Giới thiệu</h1>
 
 Ứng dụng Mobile Money được thiết kế  nhằm mục đích quản lý tài chính cá nhân, hỗ trợ thanh toán, chuyển tiền một cạnh nhanh nhất, đơn giản và bảo mật. Người dùng có thể thực hiện liên kết tài khoảng ngân hàng của họ tại tất cả các ngân hàng trong cả nước, các loại thẻ tín dụng, và ngân hàng điện tử của riêng ứng dụng. Chúng tôi giải quyết các vấn đề liên quan đến thanh toán, chuyển tiền một cánh đơn giản và thuật tiện nhất. Báo này chỉ này tập trung vào khía cạnh thiết kế giao diện của ứng dụng di động.
 
-<h3>Bài toán</h3>
+<h1>Bài toán</h1>
 
 Ngày càng nhiều người, ở mọi lứa tuổi sử dụng điện thoại thông minh. Tất cả các lĩnh vực trong cuộc sống đang dần thay đổi để phù hợp hơn xã hội khi mà ai ai cũng đều sử dụng điện thoại thông minh. Lĩnh vực tài chính cũng không ngoại lệ.
 
