@@ -11,8 +11,11 @@
 
 3. vào thư mục Group_2-design-the-user-interface
 
-    gõ lệnh: `git remote add upstream https://  github.com/vuggg/Group_2-design-the-user-interface.git`
+    gõ lệnh: `git remote add upstream https://  github.com/[username]/Group_2-design-the-user-interface.git`
 
+Ví du: link github: https://github.com/vuongdingo
+
+thì gõ lệnh: `git remote add upstream https://  github.com/vuongdingo/Group_2-design-the-user-interface.git`
 
 
 
@@ -20,7 +23,9 @@
 
 gõ lệnh: `git pull` để lấy code mới nhất từ repo
 
-<h3>Sau khi sửa code, commit rồi push lên repo đã pork, rồi new pull request để mình merge code vào repo của nhóm.</h3>
+<h3>Sau khi code</h3>
+
+commit và  push lên repo của các bạn đã pork, rồi new pull request để mình merge code vào repo của nhóm.
 
 
 <h3>Lưu ý</h3>
