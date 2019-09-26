@@ -37,6 +37,6 @@ Nếu ai chưa cài git thì cài cài nha: https://git-scm.com/downloads
 
 Do mọi người dùng CLI khác nhau nên quy ước chung là:
 
-* Tất cả code được đẳ trong thư mục `components`, style đặt trong viết trong thư mục `styles`
+* Tất cả code được đặt trong thư mục `components`, style đặt trong thư mục `styles`
 
 * commit cả package.json nếu có thêm libary mới.
