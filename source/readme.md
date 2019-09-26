@@ -40,3 +40,5 @@ Do mọi người dùng CLI khác nhau nên quy ước chung là:
 * Tất cả code được đặt trong thư mục `components`, style đặt trong thư mục `styles`
 
 * commit cả package.json nếu có thêm libary mới.
+
+![imga](https://i.imgur.com/GfDpuaB.jpg)
