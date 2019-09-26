@@ -32,3 +32,11 @@ commit và  push lên repo của các bạn đã pork, rồi new pull request đ
 
 Nếu ai chưa cài git thì cài cài nha: https://git-scm.com/downloads
 
+
+<h3>Quy ước chung khi up code</h3>
+
+Do mọi người dùng CLI khác nhau nên quy ước chung là:
+
+* Tất cả code được đẳ trong thư mục `components`, style đặt trong viết trong thư mục `styles`
+
+* commit cả package.json nếu có thêm libary mới.
