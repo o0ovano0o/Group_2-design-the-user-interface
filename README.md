@@ -5,7 +5,7 @@ Thiết kế giao diện ứng dụng Mobile Money
 Thành viên:
 
 * Nguyễn Thị Vân Anh
-* Nguyễn Minh Anh
+* Đỗ Minh Anh
 * Dương Minh Đức
 * Nguyễn Trường Giang (trưởng nhóm)
 * Phùng Xuân Vượng 
