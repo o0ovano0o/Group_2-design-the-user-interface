@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container,ListItem,Text, Header, Left, Body, Right, Button, Icon, Title, Content, List } from 'native-base';
 import {WhiteSpace} from '@ant-design/react-native/lib/white-space';
+
 export default class HeaderExample extends Component {
   render() {
     return (
@@ -43,8 +44,10 @@ export default class HeaderExample extends Component {
                 <Text>Plus</Text>
               </Left>
               <Body>
-                <Text>Thêm thẻ/tài khoản</Text>
-                </Body>
+              <Button onPress={()=>this.props.navigation.navigate('AddCardScreen')} transparent>
+                  <Text>Add</Text>
+              </Button>
+              </Body>
                 <Right>
                 <Icon name='arrow'></Icon>
               </Right>

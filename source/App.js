@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import HomePage from './components/Page/home.page';
-import LoginPage from './components/Page/login.page';
-import LoadingPage from './components/Page/loading.page';
-import VeryPage from './components/Page/very.phone.number';
-import AddCard from './components/Page/add.layout';
+import HomePage from './Page/home.page';
+import LoginPage from './Page/login.page';
+import LoadingPage from './Page/loading.page';
+import VeryPage from './Page/very.phone.number';
+import AddCard from './Page/add.layout';
+import AddCardScreen from './Page/add.card.screen';
 
 
 const AppNavigator = createStackNavigator(
@@ -14,10 +15,11 @@ const AppNavigator = createStackNavigator(
     Login: LoginPage,
     Loading: LoadingPage,
     Very: VeryPage,
-    AddCard:AddCard
+    AddCard:AddCard,
+    AddCardScreen:AddCardScreen,
   },
   {
-    initialRouteName: 'Very',
+    initialRouteName: 'AddCardScreen',
     headerMode: 'none',
   }
 );
@@ -29,7 +31,6 @@ const AppContainer = createAppContainer(AppNavigator);
 export default class App extends Component {
   render() {
     return <AppContainer />;
-
   }
 }
 

@@ -24,9 +24,9 @@ export default class HomePage extends Component {
     if(pageText == 'Home Tab'){
       return(
         <>
-          <Text>Hello Mmomo</Text>
+          <Text style={{fontSize:20, fontWeight:'bold'}}>Hello Mmomo</Text>
           <Button onPress={()=>this.props.navigation.navigate('AddCard')}
-            title={'Thêm thẻ'}></Button>
+            title={'Thêm thẻ/Tài khoản'}></Button>
         </>
       );
     }

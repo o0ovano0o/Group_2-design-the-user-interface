@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import {Tabs,Thumbnail,List,Body, ListItem, Left,Right, Tab, Container,Content, Header, Item, Icon, Input, Button, Text } from 'native-base';
+import {Tabs,Thumbnail,Body, ListItem, Left,Right, Tab, Container,Content, Header, Item, Icon, Input, Button, Text } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
+import { List, SwipeAction } from '@ant-design/react-native';
+
+
 
 const In = (props)=>{
     return(
@@ -27,19 +30,45 @@ const Out = (props)=>{
 
 const ItemHistory = (props)=>{
 
+    const right = [
+        {
+          text: 'More',
+          onPress: () => console.log('more'),
+          style: { backgroundColor: 'orange', color: 'white' },
+        },
+        {
+          text: 'Delete',
+          onPress: () => console.log('delete'),
+          style: { backgroundColor: 'red', color: 'white' },
+        },
+      ];
+
+      const left = [
+        {
+          text: 'Read',
+          onPress: () => console.log('read'),
+          style: { backgroundColor: 'blue', color: 'white' },
+        },
+        {
+          text: 'Reply',
+          onPress: () => console.log('reply'),
+          style: { backgroundColor: 'green', color: 'white' },
+        },
+      ];
+    
     const Items = props.data.map((item)=>{
-        return  <ListItem avatar>
-                    <Left>
-                        <Text>Icon</Text>
-                    </Left>
-                    <Body>
-                        <Text>Nạp tiền</Text>
-                        <Text note>Bạn đã nạp thành công 100.000đ từ BIDB</Text>
-                    </Body>
-                    <Right>
-                        <Text note>+ 100.000đ</Text>
-                    </Right>
-                </ListItem>;
+        return  <SwipeAction 
+                    autoClose
+                    style={{ backgroundColor: 'transparent' }}
+                    right={right}
+                    
+                    onOpen={() => console.log('open')}
+                    onClose={() => console.log('close')}
+                >
+                    <List.Item extra={item.content}>
+                        {item.message}
+                    </List.Item>
+                </SwipeAction>;
     });
 
 
@@ -47,10 +76,40 @@ const ItemHistory = (props)=>{
 }
 
 // Data test
-const data = [
-        {month:9, data:[1,4,5]},
-        {month:10, data:[1,5]}
+const fakeData = [
+        {
+            month:9, 
+            data:[
+                {message:'Nạp tiền thành công', content:'+1000đ'},
+                {message:'Thanh toán thành công', content:'+1000đ'},
+                {message:'Nạp tiền thất bại', content:'+1000đ'},
+                {message:'Nạp tiền thất bại', content:'+1000đ'},
+                {message:'Nạp tiền thất bại', content:'+1000đ'},
+                {message:'Nạp tiền thất bại', content:'+1000đ'},
+            ]
+        },
+        {
+            month:10, 
+            data:[
+                {message:'Nạp tiền thành công', content:'+1000đ'},
+                {message:'Thanh toán thành công', content:'+1000đ'},
+                {message:'Nạp tiền thất bại', content:'+1000đ'},
+                {message:'Nạp tiền thất bại', content:'+1000đ'},
+                {message:'Nạp tiền thất bại', content:'+1000đ'},
+                {message:'Nạp tiền thất bại', content:'+1000đ'},
+                {message:'Nạp tiền thành công', content:'+1000đ'},
+                {message:'Thanh toán thành công', content:'+1000đ'},
+                {message:'Nạp tiền thất bại', content:'+1000đ'},
+                {message:'Nạp tiền thất bại', content:'+1000đ'},
+                {message:'Nạp tiền thành công', content:'+1000đ'},
+                {message:'Thanh toán thành công', content:'+1000đ'},
+                {message:'Nạp tiền thất bại', content:'+1000đ'},
+                {message:'Nạp tiền thất bại', content:'+1000đ'},
+                
+            ]
+        }
     ];
+
 
 export default class LayoutHistory extends Component {
   render() {
@@ -88,7 +147,7 @@ export default class LayoutHistory extends Component {
             
             <List style={{backgroundColor:'white'}}>
                 {
-                    data.map((e)=>{
+                    fakeData.map((e)=>{
                         return <React.Fragment>
                                     <ListItem itemDivider>
                                         <Text>Tháng {e.month}</Text>
