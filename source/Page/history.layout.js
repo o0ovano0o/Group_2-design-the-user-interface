@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Tabs,Thumbnail,Body, ListItem, Left,Right, Tab, Container,Content, Header, Item, Icon, Input, Button, Text } from 'native-base';
+import {Tabs,Thumbnail,Body,Icon, ListItem, Left,Right, Tab, Container,Content, Header, Item, Input, Button, Text, View } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { List, SwipeAction } from '@ant-design/react-native';
 
@@ -8,23 +8,34 @@ import { List, SwipeAction } from '@ant-design/react-native';
 const In = (props)=>{
     return(
         <Container style={{flexDirection:'row',justifyContent:'space-around',alignItems:'center'}}>
-            <Button style={{flexDirection:'column',backgroundColor:'#31cad4', borderRadius:10}} transparent>
+            <View style={{paddingTop:5,flex:1, margin:10, paddingBottom:5, paddingLeft: 15,paddingRight:45,flexDirection:'column',backgroundColor:'#31cad4', borderRadius:10}} transparent>
                 
                 <Text style={{color:'white',fontWeight:'bold'}}>Nạp tiền vào ví</Text>
-                <Text style={{color:'white',fontWeight:'bold'}}>999.000đ</Text>
+                <Text style ={{color:'white',fontWeight:'bold', fontSize:20}}>222.000đ</Text>
             
-            </Button>
-            <Button style={{flexDirection:'column',backgroundColor:'#ec6941', borderRadius:10}} transparent>
-                <Text style={{color:'white',fontWeight:'bold'}}>Chiết khấu hoàn lại</Text>
-                <Text style={{color:'white',fontWeight:'bold'}}>19.000đ</Text>
-            </Button>
+            </View>
+            <View style={{flex:1 ,paddingTop:5,margin:10, paddingBottom:5, paddingLeft: 15,paddingRight:45, flexDirection:'column',backgroundColor:'#ec6941', borderRadius:10}} transparent>
+                <Text style={{color:'white',fontWeight:'bold'}}>Chiết khấu</Text>
+                <Text style={{color:'white',fontWeight:'bold',fontSize:20}}>898.000đ</Text>
+            </View>
         </Container>
     );
 } 
 
 const Out = (props)=>{
     return(
-        <Text>Điện thoại</Text>
+        <Container style={{flexDirection:'row',justifyContent:'space-around',alignItems:'center'}}>
+            <View style={{paddingTop:5,flex:1, margin:10, paddingBottom:5, paddingLeft: 15,paddingRight:45,flexDirection:'column',backgroundColor:'#31cad4', borderRadius:10}} transparent>
+                
+                <Text style={{color:'white',fontWeight:'bold'}}>Thanh toán khác</Text>
+                <Text style ={{color:'white',fontWeight:'bold', fontSize:20}}>99.000đ</Text>
+            
+            </View>
+            <View style={{flex:1 ,paddingTop:5,margin:10, paddingBottom:5, paddingLeft: 15,paddingRight:45, flexDirection:'column',backgroundColor:'#ec6941', borderRadius:10}} transparent>
+                <Text style={{color:'white',fontWeight:'bold'}}>Điện thoại</Text>
+                <Text style={{color:'white',fontWeight:'bold',fontSize:20}}>89.000đ</Text>
+            </View>
+        </Container>
     );
 } 
 
@@ -65,9 +76,19 @@ const ItemHistory = (props)=>{
                     onOpen={() => console.log('open')}
                     onClose={() => console.log('close')}
                 >
-                    <List.Item extra={item.content}>
-                        {item.message}
-                    </List.Item>
+                    <List>
+                        <ListItem avatar>
+                            <Left>
+                                <Icon name="check"></Icon>
+                            </Left>
+                            <Body>
+                                <Text>{item.message}</Text>
+                            </Body>
+                            <Right>
+                                <Text note>{item.content}</Text>
+                            </Right>
+                        </ListItem>
+                    </List>
                 </SwipeAction>;
     });
 
@@ -78,34 +99,43 @@ const ItemHistory = (props)=>{
 // Data test
 const fakeData = [
         {
-            month:9, 
+            month:'9/1019', 
             data:[
-                {message:'Nạp tiền thành công', content:'+1000đ'},
-                {message:'Thanh toán thành công', content:'+1000đ'},
-                {message:'Nạp tiền thất bại', content:'+1000đ'},
-                {message:'Nạp tiền thất bại', content:'+1000đ'},
-                {message:'Nạp tiền thất bại', content:'+1000đ'},
-                {message:'Nạp tiền thất bại', content:'+1000đ'},
+                {message:'Nạp tiền thành công', content:'+1000đ', status:'check'},
+                {message:'Thanh toán thành công', content:'+1000đ',status:'cross'},
+                {message:'Nạp tiền thành công', content:'+1000đ', status:'check'},
+                {message:'Thanh toán thành công', content:'+1000đ',status:'cross'},
+                {message:'Nạp tiền thành công', content:'+1000đ', status:'check'},
+                {message:'Thanh toán thành công', content:'+1000đ',status:'cross'},
+                {message:'Nạp tiền thành công', content:'+1000đ', status:'check'},
+                {message:'Thanh toán thành công', content:'+1000đ',status:'cross'},
+                {message:'Nạp tiền thành công', content:'+1000đ', status:'check'},
+                {message:'Thanh toán thành công', content:'+1000đ',status:'cross'},
             ]
         },
         {
-            month:10, 
+            month:'10/2019', 
             data:[
-                {message:'Nạp tiền thành công', content:'+1000đ'},
-                {message:'Thanh toán thành công', content:'+1000đ'},
-                {message:'Nạp tiền thất bại', content:'+1000đ'},
-                {message:'Nạp tiền thất bại', content:'+1000đ'},
-                {message:'Nạp tiền thất bại', content:'+1000đ'},
-                {message:'Nạp tiền thất bại', content:'+1000đ'},
-                {message:'Nạp tiền thành công', content:'+1000đ'},
-                {message:'Thanh toán thành công', content:'+1000đ'},
-                {message:'Nạp tiền thất bại', content:'+1000đ'},
-                {message:'Nạp tiền thất bại', content:'+1000đ'},
-                {message:'Nạp tiền thành công', content:'+1000đ'},
-                {message:'Thanh toán thành công', content:'+1000đ'},
-                {message:'Nạp tiền thất bại', content:'+1000đ'},
-                {message:'Nạp tiền thất bại', content:'+1000đ'},
-                
+                {message:'Nạp tiền thành công', content:'+1000đ', status:'check'},
+                {message:'Thanh toán thành công', content:'+1000đ',status:'cross'},
+                {message:'Nạp tiền thành công', content:'+1000đ', status:'check'},
+                {message:'Thanh toán thành công', content:'+1000đ',status:'cross'},
+                {message:'Nạp tiền thành công', content:'+1000đ', status:'check'},
+                {message:'Thanh toán thành công', content:'+1000đ',status:'cross'},
+                {message:'Nạp tiền thành công', content:'+1000đ', status:'check'},
+                {message:'Thanh toán thành công', content:'+1000đ',status:'cross'},
+                {message:'Nạp tiền thành công', content:'+1000đ', status:'check'},
+                {message:'Thanh toán thành công', content:'+1000đ',status:'cross'},
+                {message:'Nạp tiền thành công', content:'+1000đ', status:'check'},
+                {message:'Thanh toán thành công', content:'+1000đ',status:'cross'},
+                {message:'Nạp tiền thành công', content:'+1000đ', status:'check'},
+                {message:'Thanh toán thành công', content:'+1000đ',status:'cross'},
+                {message:'Nạp tiền thành công', content:'+1000đ', status:'check'},
+                {message:'Thanh toán thành công', content:'+1000đ',status:'cross'},
+                {message:'Nạp tiền thành công', content:'+1000đ', status:'check'},
+                {message:'Thanh toán thành công', content:'+1000đ',status:'cross'},
+                {message:'Nạp tiền thành công', content:'+1000đ', status:'check'},
+                {message:'Thanh toán thành công', content:'+1000đ',status:'cross'},
             ]
         }
     ];
@@ -134,10 +164,10 @@ export default class LayoutHistory extends Component {
                         } } size={2}>
 
                 <Tabs tabBarUnderlineStyle={{backgroundColor:'#52669c'}}>
-                    <Tab activeTextStyle={{color:'black'}} activeTabStyle={{backgroundColor:'white'}} textStyle={{color:'black'}} tabStyle={{backgroundColor:'white'}} heading="Tổng thu">
+                    <Tab activeTextStyle={{color:'black',  fontWeight:'bold', fontSize:16}} activeTabStyle={{backgroundColor:'white'}} textStyle={{color:'black'}} tabStyle={{backgroundColor:'white'}} heading="Tổng thu">
                         <In/>
                     </Tab>
-                    <Tab activeTextStyle={{color:'black'}} activeTabStyle={{backgroundColor:'white'}} textStyle={{color:'black'}} tabStyle={{backgroundColor:'white'}}  heading="Tổng chi">
+                    <Tab activeTextStyle={{color:'black',  fontWeight:'bold', fontSize:16}} activeTabStyle={{backgroundColor:'white'}} textStyle={{color:'black'}} tabStyle={{backgroundColor:'white'}}  heading="Tổng chi">
                         <Out/>
                     </Tab>
                 </Tabs>

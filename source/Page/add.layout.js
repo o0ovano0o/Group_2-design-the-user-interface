@@ -41,11 +41,11 @@ export default class HeaderExample extends Component {
 
             <ListItem style={{fontWeight:'bold',backgroundColor:'#fcfcfc'}} itemDivider >
               <Left>
-                <Text>Plus</Text>
+                <Text>Thêm thẻ</Text>
               </Left>
               <Body>
               <Button onPress={()=>this.props.navigation.navigate('AddCardScreen')} transparent>
-                  <Text>Add</Text>
+                  <Icon name="add"></Icon>
               </Button>
               </Body>
                 <Right>

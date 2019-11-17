@@ -54,8 +54,8 @@ export default class HomePage extends Component {
         <TabBar.Item
           title="Home"
           icon={<Icon  name="home" size='md' />}
-          selected={this.state.selectedTab === 'blueTab'}
-          onPress={() => this.onChangeTab('blueTab')}
+          selected={this.state.selectedTab === 'homeTab'}
+          onPress={() => this.onChangeTab('homeTab')}
         >
           {this.renderContent('Life Tab')}
         </TabBar.Item>

@@ -3,10 +3,13 @@ export const MainContent = {
 }
 
 export const ContentTop = {
-    
-    backgroundColor:'white'
+    backgroundColor:'white',
+    flex: 1, 
+    flexDirection: 'row',
+    justifyContent:'space-around',
 }
 
 export const CardLogo = {
-   
+
 }
+
